@@ -1,0 +1,44 @@
+.head{
+    height: 69px;
+    width: 100%;
+    background-color: antiquewhite;
+    position: fixed;
+}
+.head .h-box{
+    width: 1200px;
+    height:  69px;
+    background-color: blueviolet;
+    margin-left: 0px;
+}
+.head .h-box .logo{
+    width: 235px;
+    height: 69px;
+    float:left;
+    background-color: aqua;
+    margin: auto;
+}
+.head .h-box .logo .logo_title{
+    width: 100%;
+    height: 100%;
+    /*需要转化为块状元素*/
+    display: block;
+    background: url("https://www.python.org/static/img/python-logo.png");
+}
+.menu{
+    float: left;
+    margin-left: 200px;
+    line-height: 69px;
+}
+li{
+    float: left;
+    height: 69px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    color: antiquewhite;
+}
+li a{
+    color: bisque;
+}
+li:hover{
+    border-bottom: 5px solid red;
+}

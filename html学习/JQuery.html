@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            color: blue;
+        }
+        .p4{
+            color: red;
+            font-size: larger;
+        }
+        #div1{
+            height: 1000px;
+            border: red double 3px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+<p id="p1">段落标签</p>
+<p id="p2">段落标签</p>
+<p id="p3">段落标签</p>
+    <span>文本标签</span>
+    <ul>
+        <li>11</li>
+        <li id="li2">22</li>
+        <li>33</li>
+        <li>44</li>
+    </ul>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    // $('p').hide();
+    // $('#p1').html('我改变了');
+    // $('p').get(1).innerText = "哈啊哈";
+    // $('p')[2].innerText = "哈啊哈";
+    // var p1 = document.getElementById('p1');
+    // $(p1).html(" lalalla");
+    //
+    // $('#p1').append('lalalal');
+    // $('#p2').prepend('哈哈哈');
+    // $('div').empty();
+    // $('div').remove();
+    // $('#div1').attr('a', 'b');
+    // $('p').click(function (){
+    //     $('p').toggleClass('p4');
+    // })
+    $('ul li').each(function (i) {
+        $(this).html('我是第' + i + '个');
+    })
+    // alert($('#li2').index())
+    $(window).scroll(function () {
+        console.log("我在滚动");
+        console.log($(document).scrollLeft());
+    })
+</script>
+</body>
+</html>

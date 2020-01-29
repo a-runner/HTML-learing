@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个性化设置</title>
+    <style>
+        #div1{
+            border: 2px dotted brown;
+            width: 400px;
+            height: 400px;
+            background-image: url("../image/美女2.jpeg");
+            background-size: 400px 400px;
+            margin: auto;
+        }
+        input{
+            margin: 20px;
+            display: block;
+            width: 200px;
+            height: 30px;
+            background-color: cadetblue;
+        }
+        button{
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            margin-left: 10px;
+            background-color: cornflowerblue;
+        }
+        #div2{
+            width: 200px;
+            height: 150px;
+            background-color: chartreuse;
+            text-align: center;
+            margin-top: 5px;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <span>属&emsp;性：</span><input type="text" placeholder="请输入CSS属性" id="input1">
+    <span>属性值：</span><input type="text" placeholder="请输入CSS属性值" id="input2">
+    <button id="button">设置</button>
+<div id="div2">摸摸哒！！！</div>
+</div>
+
+<script>
+
+    var div2 = document.getElementById('div2');
+    var button = document.getElementById('button');
+    var input = document.getElementsByTagName('input');
+    button.onclick = function () {
+        var bt1 = input[0].value;
+        var bt2 = input[1].value;
+        div2.style[bt1] = bt2;
+        alert();
+    }
+    div2.onmouseenter = function () {
+        div2.style.backgroundImage = "url('../image/美女.jpeg')";
+        div2.style.backgroundPosition = 'right';
+        div2.innerText = '我最美'
+        div2.style.color = "red"
+    }
+    div2.onmouseleave = function () {
+        div2.style.backgroundImage = "url('../image/孙悟空.jpg')";
+        div2.style.backgroundPosition = 'center'
+        div2.innerText = '我最强'
+        div2.style.color = 'white'
+    }
+
+</script>
+</body>
+</html>

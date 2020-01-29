@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+        }
+        #div2{
+            width: 300px;
+            height: 300px;
+            border: dotted 1px red;
+        }
+        marquee{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul">
+    <li>薯片</li>
+    <li>烧烤</li>
+    <li>可乐</li>
+</ul>
+<input text="text" id="lin" >
+<input type="button" value="添加" onclick="list1()">
+<button id="btn1">隐藏</button>
+<button id="btn2">显示</button>
+<button id="btn3">get请求</button>
+<div id="div1"></div>
+<div id="div2"></div>
+  <marquee behavior="alternate" scrollamount="30" direction="left" scrolldelay="'300"> 熊猫</marquee>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    $('#btn1').click(function fun (){
+        $('#div1').animate({
+            width:'600px',
+            height:'600px'
+        },6000).delay(2000);
+    });
+    $('#btn2').click( function fun (){
+        $('#div1').stop();
+    });
+    $('#btn3').click(function () {
+        $.get('https://www.baidu.com/', function (data, status) {
+            $('#div2').text(status + '<br>' + data);
+            alert(status);
+        });
+    });
+    function list1(){
+        var li1 = document.createElement('li');
+        var text = document.getElementById('lin').value
+        // var text = $('#lin').val();
+        var span = document.createTextNode(text);
+        li1.append(span);
+        document.getElementById('ul').append(li1);
+    }
+</script>
+</body>
+</html>

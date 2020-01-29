@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星星点击</title>
+</head>
+<body style="background-color: black">
+<script>
+    window.onclick = function (n) {
+        var img = document.createElement('img');
+        img.setAttribute('src', '../image/timg.gif');
+        //图片随即大小
+        var w = Math.random()*50+100;
+        img.setAttribute('height',w);
+        //位置
+        img.style.position = 'absolute';
+        img.style.left = (n.clientX-w/2) + 'px';
+        img.style.top = (n.clientY-w/2) + 'px';
+        document.body.appendChild(img);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>加法运算</h1>
+<input type="text" name="a">+
+<input type="text" name="b">=
+<input type="text " name="c">
+<button id="btn">计算</button>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    var inp = $('input');
+    var btn = $('#btn');
+
+    btn.click(function () {
+        var a = inp.eq(0).val();
+        var b = inp.eq(1).val();
+        // 上面获得的值是字符串的类型，只有数字才能进行相加
+
+
+
+        $.ajax({
+            'url':'/',
+            // 要和后台的根目录保持一致
+            'type':'post',
+            'data':{
+                "aa":a,
+                "bb":b
+            },
+            "success":function (data) {
+                c = data['result'];
+                inp.eq(2).val(c);
+            }
+        })
+    })
+
+
+</script>
+</body>
+</html>

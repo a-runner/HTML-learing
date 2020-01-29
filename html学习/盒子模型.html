@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            color: blueviolet;
+            border: solid 1px;
+            background-color: blueviolet;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            color: red;
+            border: 1px solid;
+            background-color: chartreuse;
+            position: fixed;
+        }
+        #div3{
+            width: 200px;
+            height: 600px;
+            color: aquamarine;
+            border: solid 1px;
+            background-color: cadetblue;
+        }
+        #div4{
+            width: 200px;
+            height: 200px;
+            color: cadetblue;
+            border: 1px solid;
+            background-color: red;
+        }
+        #div5{
+            width: 100px;
+            height: 100px;
+            border: cornflowerblue solid 1px;
+            background-color: aqua;
+            left: 50px;
+            top: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div5">
+
+    </div>
+</div>
+<div id="div2">
+    天天向上
+</div>
+<div id="div3">
+    天天向上
+</div>
+<div id="div4">
+    天天向上
+</div>
+<button id="btn1">点一下</button>
+<span id="sp">啦啦啦啦</span>
+<script>
+    var btn1 = document.getElementById("btn1")
+    btn1.onclick = function () {
+        alert('我们在上课')
+    }
+
+    // var p12 = document.getElementById('sp')
+    // p12.onclick = function () {
+    //     p12.innerText = '橙子不好吃';
+    // }
+    var span = document.getElementsByTagName('span')
+    span[0].onclick = function () {
+        alert('345')
+    }
+</script>
+</body>
+</html>

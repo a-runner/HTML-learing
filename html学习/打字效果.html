@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字效果</title>
+    <style>
+        #text{
+            font-size: 30px;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<div id="text">
+
+</div>
+
+
+
+<script>
+    var box = document.getElementById('text');
+    var i = 0;
+    timer = 0;
+    str = "新年快乐！"
+
+    function add() {
+        if(i<=str.length){
+            box.innerHTML = str.slice(0,i++) + "__";
+            timer = setTimeout(add,200);
+        }
+        else {
+            box.innerHTML = str;
+            clearTimeout(timer);
+        }
+
+    }
+
+    add();
+
+
+</script>
+
+
+</body>
+</html>

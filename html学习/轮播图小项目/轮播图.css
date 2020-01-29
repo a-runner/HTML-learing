@@ -1,0 +1,395 @@
+/*页面头部*/
+.head{
+    width: 100%;
+    height: 69px;
+    background-color: black;
+}
+
+.head .h-box{
+    width: 1000px;
+    height: 69px;
+    background-color: black;
+    margin: auto;
+}
+/*网页头部的logo部分*/
+.head .h-box .logo{
+    width: 235px;
+    height: 69px;
+    background-color: black;
+    float: left;
+}
+.head .h-box .logo .logo_title{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: 235px 100px;
+    background-image: url("../../image/轮播图/大笨钟二.PNG");
+}
+/*网页头部  导航部分*/
+.head .h-box .menu{
+    float: left;
+    margin-left: 140px;
+    line-height: 65px;
+}
+.head .h-box .menu li{
+    float: left;
+    padding: 0 30px;
+}
+.head .h-box .menu li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.head .h-box .menu li:hover{
+    border-bottom: 5px solid red;
+    box-sizing: border-box;
+    /*让下划线 显示在盒子内部*/
+}
+.head .h-box .l-box{
+    float: right;
+    height: 69px;
+    background-color: black;
+    line-height: 60px;
+}
+.head .h-box .l-box span a{
+    text-decoration: none;
+    color: white;
+}
+.icon-userplus-fill:before{
+    color: red;
+    font-size: 30px;
+}
+
+/*滚动条的实现*/
+.lice{
+    width: 100%;
+    height: 100px;
+    background-image: url("../../image/轮播图/星星.jpg");
+    /*background-position: center;*/
+}
+.lice marquee{
+    line-height: 70px;
+    font-size: 30px;
+    color: aquamarine;
+}
+
+/*主体部分*/
+#div1{
+    width: 700px;
+    height: 180px;
+    border: red solid 1px;
+    background: gray;
+    background-image: url("../../image/轮播图/宋祖儿.jpg");
+    background-size: 700px 180px;
+    position: relative;
+    background-position: center;
+    transition: 2s;
+    /*渐变*/
+}
+/*左右箭头*/
+#div1 .ul1 li{
+    list-style: none;
+    line-height: 170px;
+}
+#div1 .ul1 li:hover{
+    cursor: pointer;
+}
+#div1 .ul1 li span{
+    font-size: 55px;
+    position: absolute;
+    display: none;
+}
+#div1 .ul2{
+    float: left;
+    position: absolute;
+    left: 270px;
+    top: 145px;
+}
+#div1 .ul2 li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    list-style: none;
+    float: left;
+    margin: 10px;
+    background-color: blueviolet;
+}
+#div1 .ul2 li:hover{
+    cursor: pointer;
+    background-color: chartreuse;
+}
+
+/*页面主体*/
+
+#container{
+    width: 100%;
+    background-color: darkgray;
+    padding: 30px;
+    /*float: left;*/
+}
+/*中盒子*/
+#content{
+    height: 1200px;
+    width: 1100px;
+    /*background-color: cornflowerblue;*/
+    margin: auto;
+}
+/*主体中间部分*/
+.center{
+    width: 700px;
+    height: 1200px;
+    background-color: bisque;
+    float: left;
+}
+/*放大图*/
+#div2{
+    width: 700px;
+    height: 250px;
+    background-color: rebeccapurple;
+}
+.div2_ul li{
+    float: left;
+    width: 225px;
+    height: 210px;
+    margin-left: 5px;
+    margin-top: 10px;
+    list-style: none;
+    text-align: center;
+}
+.div2_ul li a img{
+    width: 220px;
+    height: 200px;
+}
+.div2_ul li a img:hover{
+    transform: scale(1.4);
+}
+.div2_ul li a{
+    text-decoration: none;
+    line-height: 25px;
+    display: block;
+    overflow: hidden;
+}
+.div2_ul li p{
+   color: aquamarine;
+}
+
+/*老师介绍 导航条*/
+#tab{
+    width: 700px;
+    height: 660px;
+    background-color: cadetblue;
+}
+#tab .tab-menu{
+    width: 100%;
+    height: 60px;
+    background-color: brown;
+}
+.tab-menu ul{
+    list-style: none;
+}
+.tab-menu ul li{
+    float: left;
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.change{
+    border-bottom: 4px red solid;
+    box-sizing: border-box;
+}
+.tab-menu ul li a{
+    text-decoration: none;
+    color: aqua;
+}
+/*切换内容*/
+.tab-box{
+    width: 100%;
+    height: 600px;
+}
+/*第一个盒子*/
+#tb1{
+    width: 100%;
+    height: 100%;
+    /*background-color: coral;*/
+    display: none;
+}
+.tb1top{
+    width: 100%;
+    height: 50%;
+    /*background-color: bisque;*/
+}
+.tb1bot{
+    width: 100%;
+    height: 50%;
+    background-color: green;
+}
+/*上左部分*/
+.tp_left{
+    width: 300px;
+    height: 300px;
+    float: left;
+    /*background-color: bisque;*/
+}
+/*上左图片*/
+.tp_left img{
+    width: 280px;
+    height: 280px;
+    border-radius: 10%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+/*上右部分*/
+.tp_right{
+    width: 400px;
+    height: 300px;
+    float: right;
+    line-height: 78px;
+    /*background-color: bisque;*/
+}
+.tp_right span{
+    color: rebeccapurple;
+}
+/*第二个盒子*/
+#tb2{
+    width: 100%;
+    height: 600px;
+    display: none;
+}
+/*第三个盒子*/
+#tb3{
+    width: 100%;
+    height: 600px;
+    display: none;
+}
+/*第四个盒子*/
+#tb4{
+    width: 100%;
+    height: 600px;
+    display: none;
+}
+/*加载横夺*/
+#div4{
+    width: 700px;
+    height: 100px;
+    position: relative;
+}
+.more{
+    width: 400px;
+    height: 50px;
+    background-color: aqua;
+    position: absolute;
+    left: 150px;
+    top: 48px;
+    line-height: 50px;
+    text-align: center;
+}
+.more:hover{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*主体右边部分*/
+.C-right{
+    width: 360px;
+    height: 1200px;
+    background-color: aquamarine;
+    float: right;
+}
+.cr{
+    width: 320px;
+    height: 100%;
+    margin: auto;
+    background-color: blanchedalmond;
+}
+.left{
+    float: left;
+    color: red;
+}
+.right{
+    float:right;
+    color: blue;
+}
+/*第一部分*/
+.cr1{
+    width: 100%;
+    height: 310px;
+    border-bottom: 4px gray solid;
+}
+.cr1 img{
+    width: 100%;
+    height: 260px;
+}
+.cr1 p{
+    text-align: center;
+    color: brown;
+}
+/*第二部分*/
+.cr2{
+    width: 100%;
+    height: 310px;
+    border-bottom: 4px gray solid;
+}
+.cr2 img{
+    width: 100%;
+    height: 260px;
+}
+.cr2 p{
+    text-align: center;
+    color: brown;
+}
+/*第三部分*/
+.cr3{
+    border: 4px solid gray;
+}
+.cr3 li{
+    list-style: none;
+    line-height: 60px;
+}
+.cr3 li a:hover{
+    font-size: 20px;
+}
+.cr3 li a{
+    text-decoration: none;
+}
+
+.icon-github:before{
+    font-size: 40px;
+    color: blue;
+}
+.icon-bokeyuan:before{
+    font-size: 40px;
+    color: green;
+}
+.icon-csdn:before{
+    font-size: 40px;
+    color: red;
+}
+
+
+/*页面尾部*/
+.footer{
+    width: 100%;
+    background-color: gray;
+    height: 160px;
+}
+.footer .f_logo{
+    width: 1200px;
+    background: url("https://www.python.org/static/img/python-logo.png") no-repeat 50px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer .f_logo p span a{
+    text-decoration: none;
+    color: white;
+}
+.footer .f_bottom{
+    background-color: black;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+}
+.footer .f_bottom p{
+    width: 1200px;
+    margin: auto;
+}

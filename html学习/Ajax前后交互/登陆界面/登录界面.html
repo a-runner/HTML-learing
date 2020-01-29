@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+<body>
+<form action="/" method="post">
+<div class="text" style="text-align: center">
+<p>
+    用户名:<input type="text" placeholder="请输入用户名" name="user"><br><br>
+    密&emsp;码:<input type="text" placeholder="请输入密码" name="pwd">
+</p>
+<p>
+    性&emsp;别:男<input type="radio" value="man" name="sex" checked="checked"> 女<input type="radio" value="woman" name="sex">
+    保&emsp;密:<input type="radio" value="unknown" name="sex">
+</p>
+<p>
+    爱&emsp;好:
+        唱歌<input type="checkbox" value="sing" name="hobby">
+        跳舞<input type="checkbox" value="dance" name="hobby">
+        画画<input type="checkbox" value="draw" name="hobby">
+</p>
+<p>
+    上传头像：<input type="file" value="选择文件" name="file">  未选择任何文件夹<br><br>
+    地&emsp;址：
+    <select name="address">
+        <option value="湖南">长沙市</option>
+        <option value="河北">石家庄市</option>
+        <option value="吉林">长春市</option>
+        <option value="北京">北京市</option>
+    </select><br><br>
+    个人简介:<textarea rows="10"  cols="50" placeholder="有些事，明知是错的，也要去坚持，因为不甘心；有些人，明知是爱的，也要去放弃，因为没有结局；有时候，明知没路了，却还在前进，因为习惯了。"name="introduction"></textarea><br><br>
+    <input type="button" value="提交" id="btn">&nbsp;<input type="reset" value="重置">
+
+</p>
+</div>
+</form>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+
+<script>
+    var btn = $('#btn');
+    btn.click(function () {
+        var user = $('input[name="user"]').val();
+        var pwd = $('input[name="pwd"]').val();
+        var sex = $('input:checked[name="sex"]').val();
+        // var hobby = $('input:checked[name="hobby"]').val();
+        var hobby = $('input:checked[name="hobby"]').map(function (index,elem) {
+            return $(elem).val();
+        }).get().join(' ');
+        var file = $('input[name="file"]').val();
+        var address = $('select').val();
+        var introduction = $('textarea').val();
+
+        // AJAX
+        $.ajax({
+            'url':'/',
+            "type":'post',
+            "data":{
+                "user":user,
+                "pwd":pwd,
+                "sex":sex,
+                "hobby":hobby,
+                "file":file,
+                "address":address,
+                "introduction":introduction
+            }
+
+        })
+
+    })
+</script>
+
+</body>
+</html>

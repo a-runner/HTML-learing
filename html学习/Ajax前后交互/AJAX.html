@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="post">
+用户名 <input type="text" placeholder="请输入用户民" name="us" value="user" id="user"><br>
+密码 <input type="password" placeholder="请输入密码" name="pwd"><br>
+<input type="button" value="提交" id="btn1">
+</form>
+<p>前后交互.py</p>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    $(function () {
+        $('#btn1').click(function () {
+            $.ajax({
+                url:'/',
+                type:'post',
+                data:{
+                    name:$('#user').val()
+                },
+                 // print(self.get_argument("name"))
+                dataType:'text',
+                success:function (data) {
+                    alert(data);
+                },
+                error:function () {
+                    alert("出现异常")
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

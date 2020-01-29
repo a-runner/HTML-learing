@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--头部标签-->
+<head>
+    <meta charset="UTF-8">
+    <!-- 网页标题白哦前-->
+    <title>选择器</title>
+    <style>
+       /*p{*/
+           /*color: blue;*/
+           /*font-style: italic;*/
+           /*font-weight: bold;*/
+           /*text-align: center;*/
+           /*letter-spacing: 0.7em;*/
+           /*line-height: 60px;*/
+           /*word-spacing: 2em;*/
+           /*加粗*/
+       /*}*/
+      a{
+          /*出去超链接下的下划线*/
+          text-decoration: none;
+      }
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color: red;
+        }
+        a:hover{
+            font-size: 20px;
+        }
+        a:active{
+            color: blueviolet;
+        }
+    </style>
+
+</head>
+<body>
+<span>黄河入海流HHHHhhhh</span>
+<div>
+    <p>长风破浪会有时hello word</p>
+    <p>长风破浪会有时</p>
+    <p>长风破浪会有时</p>
+    <span>黄河入海流HHHHhhhh</span>
+</div>
+基本选择器：
+<div>
+    <p class="p1">我是一个段落标签</p>
+<p id="li">我是一个段落标签</p>
+<p>我是一个段落标签<span>啦啦啦</span></p>
+<p>我是一个段落标签</p>
+<p>我是一个段落标签</p>
+<span>我是一个文本白棋哦i</span>
+<span>我是一个文本白棋哦i</span>
+</div>
+
+<a href="http://www.baidu.com">奶毒</a>
+<img src="../image/git.jpg" alt="图片出错了">
+<h1>我是一个文章标题</h1>
+<h2>我是一个文章标题</h2>
+<p >我是一个网页标签</p>
+<p >我是一个网页标签</p>
+<p >我是一个网页标签</p>
+<h3>我是一个文章标题</h3>
+<table border="1">
+    <caption>早餐</caption>
+    <tr>
+        <td rowspan="2">周一</td>
+        <td colspan="2">周三</td>
+        <td>周四</td>
+    </tr>
+    <tr>
+        <td>混沌</td>
+        <td>混沌</td>
+        <td>lala</td>
+    </tr>
+</table>
+
+<span><strong>我是文本标签</strong></span>
+<span>我是文本标签</span><br>
+<span><b>我是文本标签</b></span>
+<span>我是文本标签</span>
+<!--无序列表-->
+<ul>
+    <li>椰子</li>
+    <li>橘子</li>
+    <li>橙子</li>
+</ul>
+<ol>
+    <li>火锅</li>
+    <li>火锅</li>
+    <li>火锅</li>
+</ol>
+<a href="https://baidu.com" title="提示一下" name="wd">百度搜索</a>
+<p>我是段落标签</p>
+<form action="https://www.baidu.com/s" method="get">
+    <input type="text" placeholder="强输入你要查询的关键词" name="wwd">
+    <input type="submit" value="搜索">
+<!--    文本域-->
+    <input type="text" name="text"><br>
+    <input type="button" value="按钮"><br><br>
+    <input type="password" placeholder="">
+    <input type="file" >
+<!--    size属性 显示几个选项 disabled 禁止选择-->
+    <select size="4" disabled="disabled">
+        <optgroup label="1地区">
+            <option>河北</option>
+            <option>北京</option>
+            <option>吉林</option>
+            <option>湖南</option>
+        </optgroup>
+        <optgroup label="2地区">
+            <option>广东</option>
+            <option>青岛</option>
+            <option>西藏</option>
+        </optgroup>
+    </select>
+<!--    多行文本域-->
+    <textarea cols="20" rows="10"></textarea>
+<!--    隐藏域-->
+<!--    复选框-->
+    <input type="hidden">
+    <img src="../image/git.jpg" alt="图片出错了">
+    <input type="image" src="地址">
+    <input type="checkbox" name="che" value="烧烤">我想吃烧烤<br>
+    <input type="checkbox" name="che" value="小吃">我想吃东西
+</form>
+<p>我是段落标签</p>
+<p><i>我是段落标签</i></p>
+<p><s>我是段落标签</s></p>
+<p>我是段落标签</p>
+</body>
+</html>

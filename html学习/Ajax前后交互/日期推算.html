@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期推算</title>
+</head>
+<body>
+<h1>日期推算</h1>
+年：<input type="text">
+月：<input type="text">
+日：<input type="text"><br><br>
+时间间隔：<input type="text"><br>
+<button id="btn">计算</button><br>
+<hr>
+结果：<span></span>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+
+<script>
+    var date = new Date();
+    var year = date.getFullYear();
+    var mth = date.getMonth()+1;
+    var day = date.getDate();
+
+    var input = document.querySelectorAll('input');
+    function add() {
+        input[0].value = year;
+        input[1].value = mth;
+        input[2].value = day;
+    }
+    add();
+
+    // 计算时间间隔
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        var n_year = input[0].value;
+        var n_mth = input[1].value;
+        var n_day = input[2].value;
+
+        var time = input[3].value * 24*60*60*1000;
+        date.setFullYear(n_year);
+        date.setMonth(n_mth-1);
+        date.setDate(n_day);
+        date.setMilliseconds(time);
+        var span = document.getElementsByTagName('span')[0];
+        span.innerHTML = date.getFullYear() + '年' + (date.getMonth()+1) +'月' + date.getDate()+'日';
+    }
+
+</script>
+</body>
+</html>

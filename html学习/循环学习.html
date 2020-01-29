@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环学习</title>
+    <style>
+        button{
+            background-color: cornflowerblue;
+            font-style: oblique;
+            font-family: 宋体;
+            font-size: 20px;
+
+        }
+        div{
+            background-image: url("../image/美女3.jpg");
+            border: double 5px blueviolet;
+            width: 500px;
+            height: 500px;
+            background-position: center;
+            background-size: 500px;
+            /*background: no-repeat center;*/
+        }
+        span{
+            font-size: 30px;
+            color: cadetblue;
+            font-family: Bahnschrift;
+        }
+    </style>
+</head>
+<body>
+<span>点击按钮，更换图片</span>
+<button id="btn">修改</button>
+<div id="div">
+
+</div>
+<script>
+    var a=0;
+    var c=['git.jpg','孙悟空.jpg','美女.jpeg','美女2.jpeg', '美女3.jpg'];
+   var btn = document.getElementById('btn');
+   var div = document.getElementById('div');
+   btn.onmouseenter = function () {
+       btn.style.backgroundColor = 'aquamarine';
+       btn.style.fontSize = '30px';
+   }
+   btn.onmouseleave = function () {
+       btn.style.backgroundColor = 'cornflowerblue';
+       btn.style.fontSize = '20px';
+   }
+   btn.onclick = function () {
+    var b;
+    b = a % 4;
+    a++;
+    var d = 'url("../image/ ")';
+    var e;
+    e = d.replace(' ', c[b]);
+    div.style.backgroundImage = e;
+   }
+</script>
+</body>
+</html>
