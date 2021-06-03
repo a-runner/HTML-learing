@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动物检测</title>
+    <link rel="stylesheet" href="animal.css">
+</head>
+<body>
+<div class="music">
+<!--    <p class="p1"><strong>紧张的话，放个音乐轻松一下吧！！！</strong></p>-->
+<!--    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32526653&auto=1&height=66"></iframe>-->
+</div>
+<div class="div1">
+<div id="result" class="div2">
+
+</div>
+<div class="div3">
+<!--<form action="./mask.html" method="post" id="uploadPicForm" enctype="multipart/form-data">-->
+    <div class="div5">
+    <input type="file" name="fileDemo" id="fileDemo" style="width: 200px;height: 30px;color: blueviolet"/>
+    <input type="button" value="readAsDataURL" id="readAsDataURL" onclick="showDataByURL();" style="width: 100px;height: 30px;background-color: aqua"/>
+<!--    <input type="button" value="readAsBinaryString"  id="readAsBinaryString" onclick="showDataByBinaryString();"/>-->
+<!--    <input type="button" value="readAsText"  id="readAsText" onclick="showDataByText();"/>-->
+    <button type="submit" id="bb">开始检测</button>
+
+    <div style="margin-left: 116px;">
+        <br>
+        <p><span id="ree" style="width:180px;height:30px;background-color: aliceblue;color: blue;font-size: 20px;text-align: center;">返回类别</span></p>
+        <p><span id="re" style="width:100px;height:30px;background-color: aliceblue;color: blue;font-size: 30px;text-align: center;">返回结果</span></p>
+    </div>
+    </div>
+
+</div>
+
+<div class="div4"></div>
+
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        if(typeof FileReader == "undified") {
+            alert("您老的浏览器不行了！");
+        }
+        function showDataByURL() {
+            var resultFile = document.getElementById("fileDemo").files[0];
+            if (resultFile) {
+                var reader = new FileReader();
+                reader.readAsDataURL(resultFile);
+                reader.onload = function (e) {
+                    var urlData = this.result;
+                    document.getElementById("result").innerHTML += "<img src='" + urlData + "' alt='" + resultFile.name + "' />";
+                    document.getElementById("result").style.backgroundSize="contain";
+                }
+            }
+        }
+        function showDataByBinaryString() {
+              var resultFile = document.getElementById("fileDemo").files[0];
+            if (resultFile) {
+                var reader = new FileReader();
+                //异步方式，不会影响主线程
+                reader.readAsBinaryString(resultFile);
+
+                reader.onload = function(e) {
+                    var urlData = this.result;
+                    document.getElementById("result").innerHTML += urlData;
+                };
+            }
+        }
+        function showDataByText() {
+            var resultFile = document.getElementById("fileDemo").files[0];
+            if (resultFile) {
+                var reader = new FileReader();
+
+                reader.readAsText(resultFile, 'UTF-8');
+                reader.onload = function (e) {
+                    var urlData = this.result;
+                    document.getElementById("result").innerHTML += urlData;
+                };
+            }
+        }
+
+        // 点击开始检测
+        $('#bb').click(
+            function () {
+                // form = document.getElementById("uploadPicForm");
+                var fileObj = $("#fileDemo")[0].files[0];
+                var form = new FormData();
+                form.append("k1", "v1");
+                form.append("fileDemo", fileObj);
+                // formData.append("fileDemo",form);
+                // AJAX
+                $.ajax({
+                    'url':'http://118.190.134.125:8800/animalDetect',
+                    "type":'post',
+                    "data":form,
+                    // dataType: "json",
+                    // async: false,
+                    // cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (returndata) {
+        	            if(returndata){
+        	                $('#ree').text(returndata['0']);
+        		            $("#re").text(returndata['1']);
+        		            console.log("动物检测：",returndata);
+        		            alert('成功');
+        	            }
+                    },
+                    error: function (returndata) {
+        	            // alert(returndata.msg);
+                        alert("上传失败");
+                    }
+                })
+            }
+        )
+    </script>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时词典</title>
+    <link rel="stylesheet" href="tra.css">
+</head>
+<body>
+<div class="all">
+<p id="userName1" style="font-size: 40px;color: blue;margin-left: 1000px;margin-top: 10px;"></p>
+
+<textarea  id="in" rows="8" cols="38" style="font-size: 20px;"></textarea>
+<textarea  id="out" rows="8" cols="38" style="font-size: 20px;"></textarea>
+<div class="button_trans">
+            <button type="button" id="trans" style="font-size: 20px;color: blue;">实时翻译</button>
+</div>
+<div class="button_cloud">
+            <button type="button" id="word" style="font-size: 20px;color: blue;">专属词云图</button>
+</div>
+<!--专属词汇的添加删除-->
+<input id="add_del" type="text" placeholder="请输入要添加/删除的属性">
+<button type="button" class="add" style="font-size: 20px;color: red;margin-left: 30px;">添加</button>
+<button type="button" class="del" style="font-size: 20px;color: red;margin-left: 30px;">删除</button>
+
+<!--滚动条的实现-->
+<div class="lice">
+    <marquee behavior='alternate' scrollamount='10' style="margin-top: 28px;"></marquee>
+    <marquee behavior='alternate' scrollamount='12' style="margin-top: 30px;"></marquee>
+    <marquee behavior='alternate' scrollamount='14' style="margin-top: 40px;"></marquee>
+    <marquee behavior='alternate' scrollamount='16' style="margin-top: 40px;"></marquee>
+    <marquee behavior='alternate' scrollamount='18' style="margin-top: 30px;"></marquee>
+    <marquee behavior='alternate' scrollamount='16' style="margin-top: 40px;"></marquee>
+    <marquee behavior='alternate' scrollamount='14' style="margin-top: 30px;"></marquee>
+    <marquee behavior='alternate' scrollamount='12' style="margin-top: 20px;"></marquee>
+    <marquee behavior='alternate' scrollamount='10' style="margin-top: 30px;"></marquee>
+    <marquee behavior='alternate' scrollamount='18' style="margin-top: 30px;"></marquee>
+</div>
+    <div class="ufo_cloud">
+<!--专属词汇的显示-->
+<div class="dis">
+    <p style="color: blue;font-size: larger">词云图属性展示：</p>
+<textarea id="display" rows="5" cols="38" style="font-size: 20px;"></textarea>
+</div>
+<!--词云图的显示-->
+<div class="word_cloud"></div>
+    </div>
+
+</div>
+</body>
+
+<script src="special.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+
+    // document.getElementsByClassName('word_cloud')[0].style.backgroundImage = "url('11.png')";
+    var url=decodeURI(window.location .href);
+    var aa=url.indexOf('=');
+    var user;
+    if (aa>-1) {
+        user = url.substring(aa + 1);
+    }
+    $('#useName1').html(user);
+
+    // 实时翻译 英译汉-汉译英
+    // var content=$('#in').val();
+    $('#trans').click(function () {
+        recallFun(0);
+    });
+    // 生成词云图
+    $('#word').click(function () {
+        recallFun(1);
+    });
+    // 添加词汇
+    $('.add').click(function () {
+        recallFun(2);
+    });
+    // 删除词汇
+    $('.del').click(function () {
+        recallFun(3);
+    });
+    //显示词汇
+    var int;
+    recallFun(4);
+
+    function recallFun(ty) {
+        var formData=new FormData();
+        var message=$('#in').val();
+        var addWord=$('#add_del').val();
+        // var rec=$('#user').val();
+        console.log("被发送者:"+user);
+        formData.append("user",user);
+        formData.append("ty",ty);
+        formData.append("message",message);
+        formData.append("info",addWord);
+
+        $.ajax({
+                url:'http://118.190.134.125:8800/translate',
+                type:'post',
+                data:formData,
+                // dataType: "json",
+                // dataType:"text",
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returndata) {
+                    if(Boolean(returndata["0"])) {
+                        if ((ty == '0') || (ty == 0)) {
+                            // 完成翻译功能
+                            console.log(returndata["1"]);
+                            $('#out').val(returndata["1"]);
+                        } else if ((ty == '1') || (ty == 1)) {
+                            // 显示词云图  （返回的路径）
+                            // $('.word_cloud').style.backgroundImage = "url("+returndata["1"]+")";
+                            document.getElementsByClassName('word_cloud')[0].style.backgroundImage = "url("+returndata["1"]+")";
+                            // document.getElementsByClassName('word_cloud').style.backgroundImage
+                            console.log("显示图片：");
+                            console.log(returndata["1"]);
+                        }
+                        //完成 专属词汇的添加 ---返回txt。重新刷新界面
+                        else if((ty == '2') || (ty == 2)){
+                            $('#display').val(returndata["1"]);
+                            $('#add_del').val("");
+                            console.log(user+'---trans：添加'+addWord);
+                            alert("添加: "+addWord+" 成功！！！");
+                            var str=returndata["1"].trim().split(/\s+/);
+                            ssli(str);
+                        }
+                        // 完成 专属词汇的删除 ---返回txt。重新刷新界面
+                        else if((ty == '3') || (ty == 3)){
+                            $('#display').val(returndata["1"]);
+                            $('#add_del').val("");
+                            console.log(user+'---trans：删除'+addWord);
+                            alert("删除: "+addWord+" 成功！！！");
+                            var str=returndata["1"].trim().split(/\s+/);
+                            ssli(str);
+                        }
+                        else if((ty == '4') || (ty == 4)){
+                            $('#display').val(returndata["1"]);
+                            var str=returndata["1"].trim().split(/\s+/);
+                            slide(str);
+                            int=setInterval(slide,6000,str);
+                        }
+                        else{
+                            alert("发生错误");
+                        }
+                    }
+                    else{
+                        alert(returndata["1"]);
+                    }
+                },
+                error: function (returndata) {
+                        alert("访问失败！！！");
+                    }
+            })
+        }
+    //定时函数
+    function ssli(ss){
+        clearInterval(int);
+        int=setInterval(slide,6000,ss);
+    }
+    //获取随机颜色
+    //随机生成6位16进制数的颜色值 #FFFFFF
+    function randomColor() {
+        var color = "#";
+       //for循环中，如果后面仅有一条语句，{}可省略不写
+       //随机生成6位0-15之间的数字，再用toString(16)将数字转成16进制
+       for (var i = 0; i < 6; i++)
+           color+=parseInt(Math.random() * 16).toString(16);
+       return color;
+    }
+    // 定义一个用来显示滑动的函数
+    // Math.floor(Math.random()*10);    // 可均衡获取 0 到 9 的随机整数。
+    function slide(stt) {
+        var sli=document.getElementsByTagName('marquee');
+        var random = Math.floor(Math.random() * 10);
+        for(var i=0;i<sli.length;i++){
+            sli[i].innerHTML=stt[(i+random)%(stt.length)];
+            sli[i].style.color=randomColor();
+            sli[i].style.fontSize='30px';
+        }
+    }
+</script>
+</html>
