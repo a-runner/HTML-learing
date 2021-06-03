@@ -21,3 +21,11 @@
 详细的说明在./contact/info.md中
 ### 实时翻译及词云图
 详细的说明在./translate/info.md
+
+
+**成品展示**
+http://118.190.134.125/tencentOO/login/login_in.html
+
+样例：
+* 用户名：13011594636
+* 密码：123456
