@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.word_cloud{
+    width: 490px;
+    height: 600px;
+    border: 5px dotted palevioletred;
+    position:absolute;
+    margin-left: 630px;
+}
+.dis{
+    margin-left: 120px;
+    margin-top: 50px;
+    position:absolute;
+    /*background-image: url("../image/ufo.png");*/
+}
+.button_cloud{
+    margin-left: 800px;
+}
+#add_del{
+    margin-left: 120px;
+    /*width: 50px;*/
+    height: 30px;
+}
+.button_trans{
+    margin-left: 560px;
+}
+#in{
+    margin-left: 120px;
+}
+#out{
+    margin-left: 150px;
+}
+.all{
+    background-image: url("../image/backback.png");
+}
+.lice{
+    /*float: left;*/
+    position: absolute;
+}
+.ufo_cloud{
+    width: 100%;
+    height: 800px;
+    background-image: url("../image/heart.png");
+
+}

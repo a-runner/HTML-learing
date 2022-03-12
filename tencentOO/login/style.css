@@ -1,0 +1,176 @@
+/*滚动条的实现*/
+.lice{
+    width: 70%;
+    /*width:100px*/
+    height: 140px;
+    background-image: url("../image/轮播图/星星.jpg");
+    /*background-position: center;*/
+    /*margin-top: 0px;*/
+    margin: auto;
+    position: fixed;
+    position: static;
+    /*border-radius: 5%;*/
+    /*position: absolute;*/
+}
+.lice marquee{
+    line-height: 70px;
+    font-size: 30px;
+    position: static;
+    color: aquamarine;
+    /*position: relative;*/
+}
+/*轮播图*/
+/*主体部分*/
+#div1{
+    width: 49%;
+    height: 300px;
+    border: red solid 1px;
+    background: gray;
+    background-image: url("../image/轮播图/宋祖儿.jpg");
+    background-size: 100% 300px;
+    position: relative;
+    background-position: center;
+    transition: 2s;
+    margin: auto;
+    /*渐变*/
+}
+/*左右箭头*/
+#div1 .ul1 li{
+    list-style: none;
+    line-height: 270px;
+}
+#div1 .ul1 li:hover{
+    cursor: pointer;
+}
+#div1 .ul1 li span{
+    font-size: 55px;
+    position: absolute;
+    display: none;
+}
+#div1 .ul2{
+    float: left;
+    position: absolute;
+    left: 240px;
+    top: 250px;
+}
+#div1 .ul2 li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    list-style: none;
+    float: left;
+    margin: 10px;
+    background-color: blueviolet;
+}
+#div1 .ul2 li:hover{
+    cursor: pointer;
+    background-color: chartreuse;
+}
+/*放大图*/
+#div2{
+    width: 52%;
+    height: 250px;
+    background-color: rebeccapurple;
+    margin: auto;
+}
+.div2_ul li{
+    float: left;
+    width: 210px;
+    height: 210px;
+    margin-left: 5px;
+    margin-top: 10px;
+    list-style: none;
+    text-align: center;
+}
+.div2_ul li a img{
+    width: 200px;
+    height: 200px;
+}
+.div2_ul li a img:hover{
+    transform: scale(1.4);
+}
+.div2_ul li a{
+    text-decoration: none;
+    line-height: 25px;
+    display: block;
+    overflow: hidden;
+}
+.div2_ul li p{
+   color: aquamarine;
+}
+* {
+margin: 0;
+padding: 0;
+}
+.div1{
+    width:100%;
+    padding-right: 0px;
+    /*position:relative;*/
+    /*position: fixed;*/
+}
+.div10{
+    width: 300px;
+    height: 160px;
+    /*border:5px dashed;*/
+    float: top;
+    margin: auto;
+    background-image: url("../image/腾讯OO1.png");
+}
+.div2{
+    /*width:320px;*/
+    /*width:23%;*/
+    width:290px;
+    height:600px;
+    border:5px solid ;
+    background: center no-repeat;
+    border-color: green;
+    background-image: url("../image/图二2.jpg");
+    position:fixed;
+}
+.div5{
+    width:290px;
+    height:600px;
+    float: right;
+}
+.div3{
+    /*width:320px;*/
+    /*width:23%;*/
+    width:290px;
+    height:600px;
+    border:5px solid ;
+    border-color: green;
+    background: center no-repeat;
+    background-image: url("../image/图二3.jpg");
+    float: right;
+    position:fixed;
+}
+.div6{
+    width: 70%;
+    height:150px;
+    margin: auto;
+    /*display:inline;*/
+}
+.div4{
+    /*width: 50%;*/
+    width:600px;
+    height: 800px;
+    border: 5px dotted palevioletred;
+    /*border-radius: 10%;*/
+    border-color: bisque;
+    background-image: url("../image/银色.jpg");
+    background-position: right;
+    margin: auto;
+    border-radius: 5%;
+}
+
+a:hover{
+    background-color: bisque;
+    font-size: 40px;
+}
+/*设置界面的 特色功能*/
+.div4 li{
+    margin-left: 35%;
+    margin-top: 10%;
+    color: blue;
+    font-size: 30px;
+}

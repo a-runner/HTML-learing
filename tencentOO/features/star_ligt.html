@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点亮星空</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        p{
+            color: aliceblue;
+        }
+        #div1{
+            height: 100px;
+            text-align: center;
+            border: 1px red double;
+            background-image: url("../image/漫天繁星.jpg") ;
+            background-position: top;
+        }
+        #div2{
+            height: 500px;
+            border: 1px red dotted;
+        }
+        .p1{
+            font-size: 30px;
+            color: chartreuse;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+<p>点亮5颗星星会有惊喜哦！(请点击下方黑色区域)</p>
+</div>
+<div id="div2">
+
+</div>
+<script>
+    var i = 0;
+    var div2 = document.getElementById('div2');
+    var span = document.getElementsByTagName('p')[0];
+    window.onclick = function (n) {
+        var img = document.createElement('img');
+        img.setAttribute('src', '../image/timg.gif');
+        //图片随即大小
+        var w = Math.random()*50+100;
+        img.setAttribute('height',w);
+        //位置
+        img.style.position = 'absolute';
+        img.style.left = (n.clientX-w/2) + 'px';
+        img.style.top = (n.clientY-w/2) + 'px';
+        document.body.appendChild(img);
+        i++;
+        if (i>4){
+            div2.style.backgroundImage = 'url("../image/烟花绽放.jpg")';
+            for (i=5;i>0;i--) {
+                var img = document.getElementsByTagName('img');
+                document.body.removeChild(img[0]);
+            }
+        span.innerHTML = '烟火在有繁星的天空中才会显得更加美丽！！！<br>希望你的人生' +
+            '可以像这烟火一样美丽！！';
+            span.className = 'p1';
+
+        }
+    }
+</script>
+</body>
+</html>

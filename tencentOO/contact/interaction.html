@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天互动</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--聊天窗口-->
+<div class="div1">
+    <div class="div_rec">
+        <div class="div_rec1">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="div_rec2">
+
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="div_send">
+        <textarea id="send_content" rows="7" cols="58"></textarea>
+    </div>
+    <!--        查看现有的注册用户名-->
+        <div class="check">
+            <textarea id="w3review" name="w3review" rows="16" cols="45" style="font-size:16px;color:red;font-family:Arial;font-weight:bold;">
+
+            </textarea>
+            <button type="button" style="color: blue;margin-left: 110px;font-size: 20px;margin-top: 35px" id="checkNmae">查询用户名</button>
+            <p style="color: blue;font-size: 15px;margin-top: 19px" id="recver">请填写要发送的用户名：</p>
+            <input type="text" id="user" style="margin-top: 13px">
+        </div>
+<!--        页面特效-->
+    <p id="useName1" style="font-size: 40px;color: red;margin-left: 1000px;margin-top: 10px;"></p>
+        <div class="special">
+<!--            <p id="useName" style="font-size: 20px;color: red;margin-left: 50px;margin-top: 0px;">1234</p>-->
+            <p id="time" style="font-size: 30px;color: blue"></p>
+            <button type="button" id="recv_all" style="font-size: 20px;color: blue;margin-top: 210px;margin-left: 40px">接受全部消息</button>
+        </div>
+    <!--    聊天按钮-->
+    <div class="div2">
+        <div class="button_rec">
+            <button type="button" id="rec" style="font-size: 20px;color: blue;">接受消息</button>
+        </div>
+        <div class="button_send">
+            <button type="button" id="send" style="font-size: 20px;color: blue;">发送消息</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="special.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+
+    var url=decodeURI(window.location .href);
+    var aa=url.indexOf('=');
+    var user;
+    if (aa>-1) {
+        user = url.substring(aa + 1);
+    }
+    $('#useName1').html(user);
+
+    var num_rec=14;
+    var total=14;
+    var message=$('#send_content').val();
+    var rec=$('#user').val();
+    var obj1 = document.getElementsByClassName("div_rec1")[0].getElementsByTagName("li");
+    var obj2 = document.getElementsByClassName("div_rec2")[0].getElementsByTagName("li");
+
+    // alert($('#rec').html())
+    $('#rec').click(function(){
+        recallFun(0);
+    })
+    $('#send').click(function () {
+        recallFun(1);
+    })
+    $('#recv_all').click(function () {
+        recallFun(2)
+    })
+    $('#checkNmae').click(function () {
+        recallFun(3)
+    })
+    // $('#rec').click(
+    function recallFun(ty) {
+        var formData=new FormData();
+        var message=$('#send_content').val();
+        var rec=$('#user').val();
+        console.log("被发送者:"+rec);
+        formData.append("user",user);
+        formData.append("recver",rec);
+        formData.append("message",message);
+        formData.append("ty",ty);
+        $.ajax({
+                url:'http://118.190.134.125:8800/interaction',
+                type:'post',
+                data:formData,
+                // dataType: "json",
+                // dataType:"text",
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returndata) {
+                    // var jsonData = JSON.parse(returndata);
+                    if(Boolean(returndata["0"])){
+                        if((ty=='0') || (ty==0)){
+                            var result=returndata["1"]["recv"];
+                            // console.log("ty 0:"+result[0][0]);
+                            console.log("ty:0 开始");
+                            for(var i=0;i<returndata["len"];i++){
+                                if(Boolean(result[i][0]==user))
+                                {
+
+                                    obj2[i].innerText=result[i][2];
+                                    obj1[i].innerText="\n";
+                                }
+                                else if(Boolean(result[i][0]!=user)) {
+                                    obj1[i].innerText=result[i][2];
+                                    obj2[i].innerText="\n";
+                                }
+                            }
+                            console.log("ty:0 结束")
+                        }
+                        else if((ty=='1') || (ty==1)) {
+                            var result=returndata["1"];
+                            console.log("ty:1 开始")
+                            for(var i=0;i<returndata["len"];i++){
+                                if(Boolean(result[i][0]==user))
+                                {
+                                    obj2[i].innerText=result[i][2];
+                                    obj1[i].innerText="\n";
+                                }
+                                else if(Boolean(result[i][0]!=user)) {
+                                    obj1[i].innerText=result[i][2];
+                                    obj2[i].innerText="\n";
+                                }
+                            }
+                            console.log("ty:1 结束");
+                        }
+                        // 获取全部消息
+                        else if((ty=='2') || (ty==2)){
+                            console.log("ty:2 开始");
+                            var result=returndata["1"]["recv"];
+                            // console.log(returndata);
+                            // alert(result);
+                            for(var i=0;i<returndata["len"];i++){
+                                if(Boolean(result[i][0]==user))
+                                {
+                                    obj2[i].innerText=result[i][0]+":"+result[i][2];
+                                    obj1[i].innerText="\n";
+                                }
+                                else if(Boolean(result[i][0]!=user)) {
+                                    obj1[i].innerText=result[i][0]+":"+result[i][2];
+                                    obj2[i].innerText="\n";
+                                }
+                                else{}
+                            }
+                            console.log("接收成功");
+                                // console.log(result[i][0]+"-->"+result[i][1]);
+                                // obj1[i].innerText=result[i][2];
+                                // obj2[i].innerText="";
+                            console.log("ty:2 结束");
+                        }
+                        else if((ty=='3')||(ty==3)){
+                            console.log("ty:3 开始");
+                            var res=""
+                            for(var i=0;i<returndata["len"];i++){
+                                res=res+returndata["1"][i];
+                            }
+                            $('#w3review').val(res);
+                            console.log("ty:3 结束")
+                        }
+                    }
+                    else{
+                        alert(returndata["1"]);
+                    }
+                },
+                error: function (returndata) {
+                    alert("上传失败");
+                }
+            })
+    }
+    </script>
+</html>

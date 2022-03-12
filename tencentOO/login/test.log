@@ -1,0 +1,231 @@
+nohup: ignoring input
+13011594636 123456
+(('ljw', '123456', '13011594636'),)
+[1, 'ljw']
+13011594636 123456
+(('ljw', '123456', '13011594636'),)
+[1, 'ljw']
+WARNING:tornado.access:404 GET / (111.7.96.164) 0.60ms
+WARNING:tornado.access:404 HEAD / (111.7.96.164) 0.47ms
+WARNING:tornado.access:404 GET / (111.7.96.164) 0.43ms
+WARNING:tornado.access:404 GET /favicon.ico (111.7.96.164) 0.58ms
+WARNING:tornado.access:404 HEAD / (206.189.14.161) 0.50ms
+WARNING:tornado.access:404 GET /system_api.php (206.189.14.161) 0.44ms
+WARNING:tornado.access:404 GET /system_api.php (206.189.14.161) 0.51ms
+WARNING:tornado.access:404 GET /c/version.js (206.189.14.161) 0.61ms
+WARNING:tornado.access:404 GET /streaming/clients_live.php (206.189.14.161) 0.57ms
+WARNING:tornado.access:404 GET /stalker_portal/c/version.js (206.189.14.161) 0.56ms
+WARNING:tornado.access:404 GET /client_area/ (206.189.14.161) 0.63ms
+WARNING:tornado.access:404 GET /stalker_portal/c/ (206.189.14.161) 0.57ms
+WARNING:tornado.access:404 GET /stream/live.php (206.189.14.161) 0.45ms
+WARNING:tornado.access:404 GET / (47.101.52.77) 0.62ms
+WARNING:tornado.access:404 GET / (47.100.121.83) 0.91ms
+WARNING:tornado.access:404 GET / (209.17.97.74) 0.46ms
+WARNING:tornado.access:404 GET / (47.102.36.251) 0.47ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.125.249) 0.54ms
+WARNING:tornado.access:404 GET / (185.173.35.49) 0.55ms
+WARNING:tornado.access:404 GET / (209.17.97.34) 0.44ms
+WARNING:tornado.access:404 GET / (80.82.77.33) 0.58ms
+WARNING:tornado.access:404 GET /favicon.ico (80.82.77.33) 0.50ms
+WARNING:tornado.access:404 GET / (47.98.104.88) 0.47ms
+WARNING:tornado.access:404 GET / (209.17.96.226) 0.56ms
+WARNING:tornado.access:404 GET / (47.101.155.98) 0.45ms
+WARNING:tornado.access:404 GET / (47.101.55.35) 0.66ms
+WARNING:tornado.access:404 GET / (67.205.168.4) 0.72ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.50ms
+WARNING:tornado.access:404 GET / (47.117.64.82) 0.52ms
+WARNING:tornado.access:404 GET /explicit_not_exist_path (47.117.64.82) 0.67ms
+WARNING:tornado.access:404 GET /admin/ (47.117.64.82) 0.55ms
+WARNING:tornado.access:404 GET /robots.txt (47.117.64.82) 0.60ms
+WARNING:tornado.access:404 GET /favicon.ico (47.117.64.82) 0.57ms
+WARNING:tornado.access:404 GET /login/img/product_logo.png (47.117.64.82) 0.58ms
+WARNING:tornado.access:404 GET /images/ofbiz.ico (47.117.64.82) 0.59ms
+WARNING:tornado.access:404 GET /phpMyAdmin/ (47.117.64.82) 0.55ms
+WARNING:tornado.access:404 GET /phpmyadmin/ (47.117.64.82) 0.57ms
+WARNING:tornado.access:404 GET /wcm/ (47.117.64.82) 0.53ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.53ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.55ms
+WARNING:tornado.access:404 GET / (209.17.96.210) 0.67ms
+WARNING:tornado.access:404 GET / (209.17.96.210) 0.56ms
+WARNING:tornado.access:404 GET / (47.101.45.14) 0.50ms
+WARNING:tornado.access:404 GET / (47.100.5.210) 0.54ms
+WARNING:tornado.access:404 GET /explicit_not_exist_path (47.100.5.210) 0.67ms
+WARNING:tornado.access:404 GET /admin/ (47.100.5.210) 0.58ms
+WARNING:tornado.access:404 GET /robots.txt (47.100.5.210) 0.51ms
+WARNING:tornado.access:404 GET /favicon.ico (47.100.5.210) 0.56ms
+WARNING:tornado.access:404 GET /login/img/product_logo.png (47.100.5.210) 0.58ms
+WARNING:tornado.access:404 GET /images/ofbiz.ico (47.100.5.210) 0.55ms
+WARNING:tornado.access:404 GET /phpMyAdmin/ (47.100.5.210) 0.58ms
+WARNING:tornado.access:404 GET /phpmyadmin/ (47.100.5.210) 0.60ms
+WARNING:tornado.access:404 GET /wcm/ (47.100.5.210) 0.61ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.53ms
+WARNING:tornado.access:404 GET / (209.17.96.202) 0.52ms
+WARNING:tornado.access:404 GET / (34.76.80.167) 0.56ms
+WARNING:tornado.access:404 GET / (101.132.108.252) 0.47ms
+WARNING:tornado.access:404 GET / (47.100.7.135) 0.53ms
+WARNING:tornado.access:404 GET / (111.7.96.140) 0.56ms
+WARNING:tornado.access:404 GET / (92.118.161.41) 0.48ms
+WARNING:tornado.access:404 GET / (162.142.125.128) 0.67ms
+WARNING:tornado.access:404 GET / (162.142.125.128) 0.54ms
+WARNING:tornado.access:404 GET / (209.17.97.90) 0.59ms
+WARNING:tornado.access:404 HEAD / (128.199.154.162) 0.61ms
+WARNING:tornado.access:404 GET /system_api.php (128.199.154.162) 0.48ms
+WARNING:tornado.access:404 GET /system_api.php (128.199.154.162) 0.59ms
+WARNING:tornado.access:404 GET /c/version.js (128.199.154.162) 0.46ms
+WARNING:tornado.access:404 GET /streaming/clients_live.php (128.199.154.162) 0.63ms
+WARNING:tornado.access:404 GET /stalker_portal/c/version.js (128.199.154.162) 0.52ms
+WARNING:tornado.access:404 GET /client_area/ (128.199.154.162) 0.60ms
+WARNING:tornado.access:404 GET /stalker_portal/c/ (128.199.154.162) 0.55ms
+WARNING:tornado.access:404 GET /stream/live.php (128.199.154.162) 0.59ms
+WARNING:tornado.access:404 GET / (39.103.146.185) 0.73ms
+WARNING:tornado.access:404 POST /sdk (39.103.146.185) 0.87ms
+WARNING:tornado.access:404 GET /nmaplowercheck1621524950 (39.103.146.185) 0.56ms
+WARNING:tornado.access:404 GET /evox/about (39.103.146.185) 0.86ms
+WARNING:tornado.access:404 GET /HNAP1 (39.103.146.185) 0.84ms
+WARNING:tornado.access:404 GET / (39.103.146.185) 0.60ms
+WARNING:tornado.access:404 GET / (39.103.146.185) 0.61ms
+WARNING:tornado.access:404 GET / (39.103.146.185) 0.51ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.52ms
+WARNING:tornado.access:404 GET / (39.101.205.0) 0.70ms
+WARNING:tornado.access:404 GET / (39.101.205.0) 0.53ms
+WARNING:tornado.access:404 GET / (106.14.45.145) 0.52ms
+WARNING:tornado.access:404 GET / (209.17.96.242) 0.58ms
+WARNING:tornado.access:404 GET / (47.103.4.164) 0.46ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.76ms
+WARNING:tornado.access:404 GET / (39.103.154.124) 0.67ms
+WARNING:tornado.access:404 POST /sdk (39.103.154.124) 0.75ms
+WARNING:tornado.access:404 GET /nmaplowercheck1621594045 (39.103.154.124) 0.68ms
+WARNING:tornado.access:404 GET /HNAP1 (39.103.154.124) 0.61ms
+WARNING:tornado.access:404 GET /evox/about (39.103.154.124) 0.59ms
+WARNING:tornado.access:404 GET / (39.103.154.124) 0.73ms
+WARNING:tornado.access:404 GET / (39.103.154.124) 0.84ms
+WARNING:tornado.access:404 GET / (39.103.154.124) 0.54ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.92ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.68ms
+WARNING:tornado.access:404 POST /sdk (121.89.206.174) 0.65ms
+WARNING:tornado.access:404 GET /nmaplowercheck1621623426 (121.89.206.174) 0.73ms
+WARNING:tornado.access:404 GET /HNAP1 (121.89.206.174) 0.67ms
+WARNING:tornado.access:404 GET /evox/about (121.89.206.174) 0.81ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.64ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.60ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.60ms
+WARNING:tornado.access:404 GET / (101.133.224.74) 0.49ms
+WARNING:tornado.access:404 GET / (209.17.96.194) 0.50ms
+WARNING:tornado.access:404 GET / (104.206.128.74) 0.53ms
+WARNING:tornado.access:404 GET / (39.103.163.202) 0.64ms
+WARNING:tornado.access:404 GET /nmaplowercheck1621680740 (39.103.163.202) 0.80ms
+WARNING:tornado.access:404 GET /HNAP1 (39.103.163.202) 0.77ms
+WARNING:tornado.access:404 GET /evox/about (39.103.163.202) 0.61ms
+WARNING:tornado.access:404 GET / (39.103.163.202) 0.66ms
+WARNING:tornado.access:404 POST /sdk (39.103.163.202) 0.95ms
+WARNING:tornado.access:404 GET / (39.103.163.202) 0.69ms
+WARNING:tornado.access:404 GET / (39.103.163.202) 0.59ms
+WARNING:tornado.access:404 GET / (106.14.168.238) 0.52ms
+WARNING:tornado.access:404 GET / (39.101.137.188) 0.98ms
+WARNING:tornado.access:404 GET / (39.101.137.188) 0.59ms
+WARNING:tornado.access:404 GET / (101.133.224.44) 0.54ms
+WARNING:tornado.access:404 GET / (209.17.96.250) 0.55ms
+WARNING:tornado.access:404 GET / (47.101.145.17) 0.48ms
+WARNING:tornado.access:404 GET / (178.62.204.196) 0.76ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.58ms
+WARNING:tornado.access:404 GET / (209.17.96.74) 0.97ms
+WARNING:tornado.access:404 GET / (39.103.151.185) 0.59ms
+WARNING:tornado.access:404 GET / (39.103.151.185) 0.62ms
+WARNING:tornado.access:404 GET / (209.17.96.34) 0.50ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.50ms
+WARNING:tornado.access:404 GET / (104.140.188.26) 0.55ms
+13011594636 123456
+(('ljw', '123456', '13011594636'),)
+[1, 'ljw']
+38.76
+select * from ljw where recver="ljw";
+select * from ljw where recver="ljw";
+result_all_people back: []
+select * from lyr where recver="ljw";
+select * from ljw where recver="lyr";
+result_all_people back: [('ljw', 'lyr', 'bbb', '0', '2021-05-13 15:45:25'), ('ljw', 'lyr', 'eee', '0', '2021-05-13 15:45:09'), ('ljw', 'lyr', 'oooo', '0', '2021-05-13 15:45:00'), ('ljw', 'lyr', 'qqq', '0', '2021-05-13 15:43:53'), ('ljw', 'lyr', 'me too', '0', '3'), ('lyr', 'ljw', 'best', '0', '2021-05-08 16:19:05'), ('lyr', 'ljw', 'i love you', '0', '0')]
+result_last:   [('lyr', 'ljw', 'i love you', '0', '0'), ('lyr', 'ljw', 'best', '0', '2021-05-08 16:19:05'), ('ljw', 'lyr', 'qqq', '0', '2021-05-13 15:43:53'), ('ljw', 'lyr', 'oooo', '0', '2021-05-13 15:45:00'), ('ljw', 'lyr', 'eee', '0', '2021-05-13 15:45:09'), ('ljw', 'lyr', 'bbb', '0', '2021-05-13 15:45:25'), ('ljw', 'lyr', 'me too', '0', '3')]
+查找： (('lyr',),)
+进入：
+lalal: (('ljw',),)
+
+rec——data
+result11 back: [('lyr', 'ljw', 'best', '0', '2021-05-08 16:19:05'), ('lyr', 'ljw', 'i love you', '0', '0'), ('ljw', 'lyr', '12345', '0', '2021-05-25 23:08:40'), ('ljw', 'lyr', 'bbb', '0', '2021-05-13 15:45:25'), ('ljw', 'lyr', 'eee', '0', '2021-05-13 15:45:09'), ('ljw', 'lyr', 'oooo', '0', '2021-05-13 15:45:00'), ('ljw', 'lyr', 'qqq', '0', '2021-05-13 15:43:53'), ('ljw', 'lyr', 'me too', '0', '3')]
+errrr:   [('lyr', 'ljw', 'i love you', '0', '0'), ('lyr', 'ljw', 'best', '0', '2021-05-08 16:19:05'), ('ljw', 'lyr', 'qqq', '0', '2021-05-13 15:43:53'), ('ljw', 'lyr', 'oooo', '0', '2021-05-13 15:45:00'), ('ljw', 'lyr', 'eee', '0', '2021-05-13 15:45:09'), ('ljw', 'lyr', 'bbb', '0', '2021-05-13 15:45:25'), ('ljw', 'lyr', '12345', '0', '2021-05-25 23:08:40'), ('ljw', 'lyr', 'me too', '0', '3')]
+rres:[('lyr', 'ljw', 'i love you', '0', '0'), ('lyr', 'ljw', 'best', '0', '2021-05-08 16:19:05'), ('ljw', 'lyr', 'qqq', '0', '2021-05-13 15:43:53'), ('ljw', 'lyr', 'oooo', '0', '2021-05-13 15:45:00'), ('ljw', 'lyr', 'eee', '0', '2021-05-13 15:45:09'), ('ljw', 'lyr', 'bbb', '0', '2021-05-13 15:45:25'), ('ljw', 'lyr', '12345', '0', '2021-05-25 23:08:40'), ('ljw', 'lyr', 'me too', '0', '3')]
+WARNING:tornado.access:404 GET / (47.101.155.113) 0.50ms
+WARNING:tornado.access:404 GET / (47.102.112.89) 0.54ms
+WARNING:tornado.access:404 GET / (209.17.97.34) 0.62ms
+WARNING:tornado.access:404 GET / (121.5.112.244) 0.75ms
+WARNING:tornado.access:404 GET / (47.98.34.250) 0.61ms
+13011594636 123456
+(('ljw', '123456', '13011594636'),)
+[1, 'ljw']
+13011594636 123456
+(('ljw', '123456', '13011594636'),)
+[1, 'ljw']
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.59ms
+WARNING:tornado.access:404 GET / (75.119.142.201) 0.51ms
+WARNING:tornado.access:404 GET / (209.17.97.106) 1.02ms
+WARNING:tornado.access:404 GET / (121.89.194.108) 0.62ms
+WARNING:tornado.access:404 POST /sdk (121.89.194.108) 0.69ms
+WARNING:tornado.access:404 GET /nmaplowercheck1622109227 (121.89.194.108) 0.73ms
+WARNING:tornado.access:404 GET /HNAP1 (121.89.194.108) 0.68ms
+WARNING:tornado.access:404 GET /evox/about (121.89.194.108) 0.73ms
+WARNING:tornado.access:404 GET / (121.89.194.108) 0.61ms
+WARNING:tornado.access:404 GET / (121.89.194.108) 0.68ms
+WARNING:tornado.access:404 GET / (121.89.194.108) 0.63ms
+WARNING:tornado.access:404 GET / (162.142.125.38) 0.51ms
+WARNING:tornado.access:404 GET / (162.142.125.38) 0.60ms
+WARNING:tornado.access:404 GET / (162.142.125.128) 0.69ms
+WARNING:tornado.access:404 GET / (185.142.239.16) 0.53ms
+WARNING:tornado.access:404 GET /favicon.ico (185.142.239.16) 1.07ms
+WARNING:tornado.access:404 GET / (34.77.163.42) 0.51ms
+WARNING:tornado.access:404 GET / (39.103.164.38) 0.48ms
+WARNING:tornado.access:404 GET / (209.17.96.234) 0.53ms
+WARNING:tornado.access:404 HEAD / (46.101.5.176) 0.56ms
+WARNING:tornado.access:404 GET /system_api.php (46.101.5.176) 0.54ms
+WARNING:tornado.access:404 GET /system_api.php (46.101.5.176) 0.54ms
+WARNING:tornado.access:404 GET /c/version.js (46.101.5.176) 0.65ms
+WARNING:tornado.access:404 GET /streaming/clients_live.php (46.101.5.176) 0.48ms
+WARNING:tornado.access:404 GET /stalker_portal/c/version.js (46.101.5.176) 0.64ms
+WARNING:tornado.access:404 GET /client_area/ (46.101.5.176) 0.66ms
+WARNING:tornado.access:404 GET /stalker_portal/c/ (46.101.5.176) 0.71ms
+WARNING:tornado.access:404 GET /stream/live.php (46.101.5.176) 0.54ms
+WARNING:tornado.access:404 GET / (71.6.135.131) 0.99ms
+WARNING:tornado.access:404 GET /favicon.ico (71.6.135.131) 0.53ms
+WARNING:tornado.access:404 GET / (34.77.163.42) 0.57ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.89ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.65ms
+WARNING:tornado.access:404 GET /nmaplowercheck1622194612 (121.89.206.174) 0.49ms
+WARNING:tornado.access:404 GET /HNAP1 (121.89.206.174) 0.61ms
+WARNING:tornado.access:404 GET /evox/about (121.89.206.174) 0.69ms
+WARNING:tornado.access:404 POST /sdk (121.89.206.174) 0.78ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.71ms
+WARNING:tornado.access:404 GET / (121.89.206.174) 0.51ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 1.22ms
+WARNING:tornado.access:404 GET / (209.17.97.34) 0.45ms
+WARNING:tornado.access:404 GET / (47.103.118.33) 0.55ms
+WARNING:tornado.access:404 GET / (39.103.157.217) 0.49ms
+WARNING:tornado.access:404 GET / (162.142.125.37) 0.64ms
+WARNING:tornado.access:404 GET / (106.14.47.169) 0.60ms
+WARNING:tornado.access:404 GET /nmaplowercheck1622300646 (106.14.47.169) 0.66ms
+WARNING:tornado.access:404 GET /HNAP1 (106.14.47.169) 0.93ms
+WARNING:tornado.access:404 GET /evox/about (106.14.47.169) 0.68ms
+WARNING:tornado.access:404 GET / (106.14.47.169) 0.60ms
+WARNING:tornado.access:404 POST /sdk (106.14.47.169) 0.80ms
+WARNING:tornado.access:404 GET / (106.14.47.169) 0.62ms
+WARNING:tornado.access:404 GET / (106.14.47.169) 0.48ms
+WARNING:tornado.access:404 GET / (92.118.161.29) 0.46ms
+WARNING:tornado.access:404 GET / (47.92.29.149) 0.43ms
+WARNING:tornado.access:404 GET / (209.17.97.26) 0.56ms
+WARNING:tornado.access:404 GET / (162.142.125.128) 0.52ms
+WARNING:tornado.access:404 GET / (101.133.136.70) 0.53ms
+WARNING:tornado.access:404 GET / (106.14.187.229) 0.52ms
+WARNING:tornado.access:404 GET http://passport.baidu.com/ (47.241.193.60) 0.57ms
+WARNING:tornado.access:404 GET / (106.75.138.124) 0.59ms
+WARNING:tornado.access:404 GET / (106.75.172.167) 0.56ms
+WARNING:tornado.access:404 GET / (167.248.133.53) 0.51ms
+WARNING:tornado.access:404 GET / (209.17.96.218) 0.56ms
+WARNING:tornado.access:404 GET / (174.138.25.133) 0.89ms
+WARNING:tornado.access:404 GET / (209.17.97.98) 0.50ms

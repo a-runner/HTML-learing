@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="question.css">
+    <title>问卷调查</title>
+</head>
+<body>
+        <div class="index">
+			<h1>手机移动支付业务调查问卷</h1>
+			<hr color="orange" width="700px" />
+			<div class="div1">
+			<form method="post" id="updateForm" >
+				<ol>
+					<li>您的教育程度是？</li>
+					<label><input type="radio" name="education" value="高中" required />&nbsp;&nbsp;高中&nbsp;&nbsp; </label>
+					<label><input type="radio" name="education" value="大专" />&nbsp;&nbsp;大专&nbsp;&nbsp; </label>
+					<label><input type="radio" name="education" value="本科" />&nbsp;&nbsp;本科&nbsp;&nbsp; </label>
+					<label><input type="radio" name="education" value="硕士研究生" />&nbsp;&nbsp;硕士研究生&nbsp;&nbsp; </label>
+					<label><input type="radio" name="education" value="博士及以上" />&nbsp;&nbsp;博士及以上 </label>
+					<li>您的年龄段是？</li>
+					<label><input type="radio" name="age" value="18岁以下" required />&nbsp;&nbsp;18岁以下&nbsp;&nbsp; </label>
+					<label><input type="radio" name="age" value="18-25岁" />&nbsp;&nbsp;18-25岁&nbsp;&nbsp; </label>
+					<label><input type="radio" name="age" value="26-30岁" />&nbsp;&nbsp;26-30岁&nbsp;&nbsp; </label>
+					<label><input type="radio" name="age" value="31-35岁" />&nbsp;&nbsp;31-35岁&nbsp;&nbsp; </label>
+					<label><input type="radio" name="age" value="35岁以上" />&nbsp;&nbsp;35岁以上 </label>
+					<li>您是否使用过手机移动支付业务？</li>
+					<label><input type="radio" name="use" value="从未听说过" required />&nbsp;&nbsp;从未听说过&nbsp;&nbsp; </label>
+					<label><input type="radio" name="use" value="听说过，但未使用过" />&nbsp;&nbsp;听说过，但未使用过&nbsp;&nbsp; </label>
+					<label><input type="radio" name="use" value="偶尔使用" />&nbsp;&nbsp;偶尔使用&nbsp;&nbsp; </label>
+					<label><input type="radio" name="use" value="经常使用" />&nbsp;&nbsp;经常使用&nbsp;&nbsp; </label>
+					<li>您看中以下哪些支付功能？（可多选）</li>
+					<label><input type="checkbox" name="how" value="话费/游戏币充值" />&nbsp;&nbsp;话费/游戏币充值</label><br />
+					<label><input type="checkbox" name="how" value="刷手机加油" />&nbsp;&nbsp;刷手机加油</label><br />
+					<label><input type="checkbox" name="how" value="刷手机购物" />&nbsp;&nbsp;刷手机购物</label><br />
+					<label><input type="checkbox" name="how" value="刷手机乘坐公交/轻轨/地铁" />&nbsp;&nbsp;刷手机乘坐公交/轻轨/地铁</label><br />
+					<label><input type="checkbox" name="how" value="水电煤/有线电视/宽带远程缴费" />&nbsp;&nbsp;水电煤/有线电视/宽带远程缴费</label><br />
+					<label><input type="checkbox" name="how" value="享受联盟商户的优惠折扣" />&nbsp;&nbsp;享受联盟商户的优惠折扣</label><br />
+					<label><input type="checkbox" name="how" value="以上均不感兴趣" />&nbsp;&nbsp;以上均不感兴趣</label><br />
+				    <li>你经常的移动支付app是？</li>
+                    <label><input type="checkbox" name="app" value="支付宝" />&nbsp;&nbsp;支付宝</label><br />
+					<label><input type="checkbox" name="app" value="微信" />&nbsp;&nbsp;微信</label><br />
+                </ol>
+				您的姓名&nbsp;&nbsp;<input type="text" name="username" required />
+				&nbsp;&nbsp;您的职业&nbsp;&nbsp;<input type="text" name="occupation" required />
+				&nbsp;&nbsp;联系电话&nbsp;&nbsp;<input type="tel" name="tele" required />
+				<br />
+<!--				<button id="btn" type="submit">提交问卷</button>-->
+				<input type="submit" value="提交" id="updateButton" style="color: blueviolet;font-size: 30px">
+			</form>
+<!--				<input type="submit" value="提交" id="updateButton">-->
+				<iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+			</div>
+		</div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+        $("#updateButton").click(function (){
+            var data = $("#updateForm").serializeArray();   //看对了  serialize()   不是se()
+            var postdata=new Object();  //空数组
+            $(data).each(function(i){
+                postdata[this.name]=this.value      //
+            });
+            // console.log(postdata);
+            // console.log(postdata.username);
+            $.ajax({
+                url:"http://118.190.134.125:8800/questionnaire",
+                data:postdata,
+                datatype:"json",
+                type:"post",
+                success:function(data){
+                    alert(data);
+                },
+                error:function (data) {
+                    alert(data)
+                }
+            })
+        })
+</script>
+</html>

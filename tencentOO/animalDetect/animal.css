@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+button{
+    height: 50px; width: 379px;color: blue;
+    /*border: 1px solid blueviolet;*/
+    font-size: 20px;
+    text-align: center;
+    position: center;
+    background-color: aqua;
+}
+.div2{
+    width: 490px;
+    height: 600px;
+    border: 5px dotted palevioletred;
+    position:absolute;
+}
+button:hover{
+    background-color: bisque;
+}
+#readAsDataURL{
+    margin-top: 100px;
+}
+.div3{
+    width: 379px;
+    height: 600px;
+    /*float:right;*/
+    /*margin-top: 100px;*/
+    margin-left: 520px;
+    background-image: url("../image/animal11.jpg");
+    /*background-image: url("./小姐姐33.jpg");*/
+    /*margin-top: 0px;*/
+    /*opacity: 0.2;*/
+    background-position: center;
+    position: absolute;
+    /*margin: auto;*/
+}
+#fileDemo{
+    /*position: relative;*/
+    margin-top: 200px;
+}
+#bb{
+    margin-top: 100px;
+}
+.music{
+    float: right;
+    font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 20px;
+    color: black;
+}
+.div4{
+    width: 330px;
+    height: 600px;
+    background-image: url("../image/animal22.jpg");
+    background-position: center;
+    /*float: right;*/
+    /*opacity: 0.2;*/
+    /*margin: auto;*/
+    margin-left: 910px;
+}
+img{
+    /*opacity: 0.2;*/
+}
+.div5{
+    position: relative;
+    top: 100px;
+}
+.div1{
+}

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    margin-left: 20%;
+}
+h1{
+    margin-left: 35%;
+}
+.div1{
+    /*width:100%;*/
+    height: 100%;
+    margin-left: 25%;
+    /*position: absolute;*/
+}
+.index{
+    width:100%;
+    height: 100%;
+    background: url("../image/question.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+}
+#updateButton{
+    margin-left: 30%;
+    margin-top: 10%;
+}

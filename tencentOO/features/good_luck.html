@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>亲送祝福</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #s0{
+            color: black;
+            font-size: 50px;
+            margin-left: 290px;
+            padding-top: 80px;
+        }
+        #div3{
+            border: 2px double red;
+            background-image: url("../image/美女2.jpeg");
+            height: 500px;
+        }
+        colorslide{
+            font-size: 30px;
+            font-family: KaiTi;
+        }
+        #div4{
+            background-image: url("../image/猪猪.jpg");
+            height: 200px;
+            background-position: center;
+        }
+    </style>
+</head>
+<script src="colorslide.js"></script>
+<body onload="javascript:colorslide()">
+<div id="div1">
+    <div id="div4">
+        <p id="s0">下面由——大笨钟送祝福</p></div>
+    <div id="div3">
+    <p>
+        <colorslide>&emsp;花开花谢，此消彼长，云卷云舒，又是一年。愿时间更替带给你漂亮心情，飘送着我的祝福，萦绕在您的身边。祝你新年快乐!快乐每一天!</colorslide><br><br>
+        <colorslide>&emsp;悠悠心境两不同，短短信息一片心。昨日新朋成旧友，今天新月唤旧情。青梅煮酒少一人，不说英雄说知音。预祝春节快乐！</colorslide><br><br>
+        <colorslide>&emsp;灯笼，照亮幸福人生；灯火，映出火红日子；酒杯，盛满吉祥好运；礼花，绽放快乐心情；歌舞，秀出节日喜庆；祝福，则发送出无限美好。朋友，春节到了，愿你开怀，幸福永远！</colorslide><br><br>
+        <colorslide>&emsp;新春到来，送礼太俗套，祝福没花招，只有祝愿亲爱的朋友们：天天被财神爷骚扰，时时被弥勒佛普照，大把赚钞票，快乐哈哈笑，幸福跟着跑。新年快乐！</colorslide>
+    </p></div>
+</div>
+
+
+<script>
+     function changeColor(){
+         var color="#f00|#0f0|#00f|#880|#808|#088|yellow|green|blue|gray";
+         color=color.split("|");
+         for(var i=0;i<4;i++) {
+             document.getElementsByTagName("colorslide")[i].style.color = color[parseInt(Math.random() * color.length)];
+         }
+         }
+     setInterval("changeColor()",200);
+</script>
+</body>
+</html>

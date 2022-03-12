@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天互动</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--聊天窗口-->
+<div class="div1">
+    <div class="div_rec">
+        <div class="div_rec1">
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1111</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="div_rec2">
+
+            <ul>
+                <li>1111111111111111111111111111111111111111111111</li>
+                <li>12345678</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="div_send">
+        <textarea id="send_content" rows="7" cols="58"></textarea>
+    </div>
+    <!--        查看现有的注册用户名-->
+        <div class="check">
+            <textarea id="w3review" name="w3review" rows="20" cols="50">
+
+            </textarea>
+            <button type="button" style="color: blue;margin-left: 110px;font-size: 20px;margin-top: 35px" id="checkNmae">查询用户名</button>
+            <p style="color: blue;font-size: 15px;margin-top: 19px" id="recver">请填写要发送的用户名：</p>
+            <input type="text" id="user" style="margin-top: 13px">
+        </div>
+<!--        页面特效-->
+        <div class="special">
+            <p id="time" style="font-size: 30px;color: blue"></p>
+            <button type="button" id="recv_all" style="font-size: 20px;color: blue;margin-top: 210px;margin-left: 40px">接受全部消息</button>
+        </div>
+    <!--    聊天按钮-->
+    <div class="div2">
+        <div class="button_rec">
+            <button type="button" id="rec" style="font-size: 20px;color: blue;">接受消息</button>
+        </div>
+        <div class="button_send">
+            <button type="button" id="send" style="font-size: 20px;color: blue;">发送消息</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="special.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+
+    var url=decodeURI(window.location .href);
+    var aa=url.indexOf('=');
+    var user;
+    if (aa>-1) {
+        user = url.substring(aa + 1);
+        alert(user);
+    }
+    var num_rec=14;
+    var total=14;
+    var message=$('#user').text();
+    var rec=$('#recver').text();
+    var obj1 = document.getElementsByClassName("div_rec1")[0].getElementsByTagName("li");
+    var obj2 = document.getElementsByClassName("div_rec2")[0].getElementsByTagName("li");
+
+    // alert($('#rec').html())
+    $('#rec').click(function(){
+        recallFun(0);
+    })
+    $('#send').click(function () {
+        recallFun(1);
+    })
+    $('#recv_all').click(function () {
+        recallFun(2)
+    })
+    $('#checkNmae').click(function () {
+        recallFun(3)
+    })
+    // $('#rec').click(
+    function recallFun(ty) {
+        var formData=new FormData();
+        formData.append("user",'ljw');
+        formData.append("recver",rec);
+        formData.append("message",message);
+        formData.append("ty",ty);
+        $.ajax({
+                url:'http://118.190.134.125:8000/',
+                type:'post',
+                data:formData,
+                // dataType: "json",
+                // dataType:"text",
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returndata) {
+                    // var jsonData = JSON.parse(returndata);
+                    if(Boolean(returndata["0"])){
+                        if((ty=='0') || (ty==0)){
+                            var result=returndata["1"]["recv"];
+                            for(i=0;i<returndata["len"];i++){
+                                if(result[i][0]==user)
+                                {
+                                    obj2[i].innerText=result[i][2];
+                                }
+                                else if(result[i][0]!=user) {
+                                    obj1[i].innerText=result[i][2];
+                                }
+                            }
+                            alert("ty:0")
+                        }
+                        else if((ty=='1') || (ty==1)) {
+                            var result=returndata["1"];
+                            for(i=0;i<returndata["len"];i++){
+                                if(result[i][0]==user)
+                                {
+                                    obj2[i].innerText=result[i][2];
+                                }
+                                else if(result[i][0]!=user) {
+                                    obj1[i].innerText=result[i][2];
+                                }
+                            }
+                            alert("ty:1");
+                        }
+                        // 获取全部消息
+                        else if((ty=='2') || (ty==2)){
+                            console.log("进入2");
+                            var result=returndata["1"]["recv"];
+                            console.log(returndata);
+                            alert(result);
+                            for(i=0;i<returndata["len"];i++){
+                                if(Boolean(result[i])) {
+                                    console.log(obj1[i].innerText);
+                                    obj1[i].innerText=result[i][2];
+                                }
+                            }
+                            alert("ty:2");
+                        }
+                        else if((ty=='3')||(ty==3)){
+                            console.log("进入3");
+                            var res=""
+                            for(i=0;i<returndata["len"];i++){
+                                res=res+returndata["1"][i];
+                            }
+                            console.log(res);
+                            $('#w3review').innerText=res;
+                        }
+                    }
+                    else{
+                        alert(returndata["1"]);
+                    }
+                },
+                error: function (returndata) {
+                    alert("上传失败");
+                }
+            })
+    }
+    </script>
+</html>
